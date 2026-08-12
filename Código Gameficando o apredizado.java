@@ -26,6 +26,15 @@ public class GameEstudos {
             System.out.println("Escolha uma acao: ");
             opcao = scanner.nextInt();
             scanner.nextLine(); //Limpa o buffer
+
+            if (opcao == 1) {
+                System.out.println("\nQual tipo de exercicio você fez?");
+                System.out.println("A) Leitura/Teoria (+10 XP)");
+                System.out.println("B) Prática no Coddy/Faculdade (+30 XP)");
+                System.out.println("Escolha (A ou B): ");
+                String tipo =  scanner.nextLine();
+                
+            }
         }
     }
 }
