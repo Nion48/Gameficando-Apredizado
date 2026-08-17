@@ -33,7 +33,21 @@ public class GameEstudos {
                 System.out.println("B) Prática no Coddy/Faculdade (+30 XP)");
                 System.out.println("Escolha (A ou B): ");
                 String tipo =  scanner.nextLine();
+
+                if (tipo.equalsIgnoreCase("A")) {
+                    xpAtual = xpAtual + 10;
+                    historico.add("Estudou Teoria.");
+                    System.out.println("Boa! Ganhou 10 de XP.");
+                } else if (tipo.equalsIgnoreCase("B")) {
+                    xpAtual = xpAtual + 30;
+                    historico.add("Praticou Código.");
+                    System.out.println("Excelente! Ganhou 30 de XP.");
+                }
+
+                // Lógica de subir de nível (If em ação!)
                 
+                }
+                }
             }
         }
     }
