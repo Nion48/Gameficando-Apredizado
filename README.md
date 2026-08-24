@@ -1,3 +1,5 @@
 # Gameficando-Apredizado
 
-teste
+teste push
+
+teste pull
