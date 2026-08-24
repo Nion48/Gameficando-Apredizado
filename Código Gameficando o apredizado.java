@@ -16,7 +16,7 @@ public class GameEstudos {
         while (opçao != 3) {
             //Toda vez que o menu aparece, mostra o Status atual
             System.out.println("\n=== STATUS ===");
-            System.out.println("NÍVEL: " + nível);
+            System.out.println("NÍVEL: " + nivel);
             System.out.println("XP: " + xpAtual + " / " + xpParaUpar);
             System.out.println("==========");
 
@@ -24,10 +24,10 @@ public class GameEstudos {
             System.out.println("2. Ver Histórico do Treino");
             System.out.println("3. Sair do Jogo");
             System.out.println("Escolha uma acao: ");
-            opcao = scanner.nextInt();
+            opçao = scanner.nextInt();
             scanner.nextLine(); //Limpa o buffer
 
-            if (opcao == 1) {
+            if (opçao == 1) {
                 System.out.println("\nQual tipo de exercicio você fez?");
                 System.out.println("A) Leitura/Teoria (+10 XP)");
                 System.out.println("B) Prática no Coddy/Faculdade (+30 XP)");
@@ -45,10 +45,20 @@ public class GameEstudos {
                 }
 
                 // Lógica de subir de nível (If em ação!)
-                
+                if (xpAtual >= xpParaUpar) {
+                    nivel = nivel + 1;       // Sobe de nível
+                    xpAtual = xpAtual - xpParaUpar; // Reseta o XP mantendo a sobra
+                    xpParaUpar = xpParaUpar + 50;   // A próxima fase fica mais difícil!
+                    System.out.println("\n🥳 SUBIU DE NÍVEL! Você agora está no nível " + nivel + "!");
                 }
+            } else if (opçao == 2) {
+                System.out.println("\n--- Histórico de Conquistas ---");
+                for (int i = 0; i < historico.size(); i++) {
+                    System.out.println("- " + historico.get(i));
                 }
-            }
+            }    
         }
+        scanner.close();
     }
+            
 }
