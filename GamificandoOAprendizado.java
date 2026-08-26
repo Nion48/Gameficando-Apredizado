@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class GameEstudos {
+public class GamificandoOAprendizado {
     public static void main(String[] args) {
         List<String> historico = new ArrayList<>();
-        Scanner scanner = new scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int opçao = 0;
 
         //Minhas variáveis (personagem de game)
