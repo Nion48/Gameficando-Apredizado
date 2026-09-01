@@ -14,17 +14,18 @@ public class GamificandoOAprendizado {
         int nivel = 1;
         int xpParaUpar = 100;
 
-        while (opçao != 3) {
+        while (opçao != 5) {
             //Toda vez que o menu aparece, mostra o Status atual
             System.out.println("\n=== STATUS ===");
             System.out.println("NÍVEL: " + nivel);
             System.out.println("XP: " + xpAtual + " / " + xpParaUpar);
             System.out.println("==========");
 
-            System.out.println("1. Registrar Exercício Concluído (+XP)");
+            System.out.println("1. Registrar Teoria Aprendida (+XP)");
             System.out.println("2. Anotar Novo Código Aprendido (+XP)");
-            System.out.println("3. Ver Histórico Completo");
-            System.out.println("Sair do Jogo");
+            System.out.println("3. Registrar Exercício Físico feito (+XP)");
+            System.out.println("4. Ver Histórico Completo");
+            System.out.println("5. Sair do Jogo");
             System.out.println("Escolha uma acao: ");
             opçao = scanner.nextInt();
             scanner.nextLine(); //Limpa o buffer
@@ -63,7 +64,9 @@ public class GamificandoOAprendizado {
                 for (int i = 0; i < historicoExercicios.size(); i++) {
                     System.out.println("- " + historicoExercicios.get(i));
                 }
-            }    
+            } else if (opçao == 3) {
+                System.out.println("\n--- ")
+            }   
         }
         scanner.close();
     }
