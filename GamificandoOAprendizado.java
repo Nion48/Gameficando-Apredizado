@@ -14,21 +14,21 @@ public class GamificandoOAprendizado {
         int nivel = 1;
         int xpParaUpar = 100;
 
-        while (opçao != 5) {
+        while (opçao != 4) {
             //Toda vez que o menu aparece, mostra o Status atual
             System.out.println("\n=== STATUS ===");
-            System.out.println("NÍVEL: " + nivel);
+            System.out.println("JOGO DE REGISTRO DA PRÓPRIA EVOLUÇÃO");
+            System.out.println("NÍVEL ATUAL: " + nivel);
             System.out.println("XP: " + xpAtual + " / " + xpParaUpar);
             System.out.println("==========");
 
-            System.out.println("1. Registrar Teoria Aprendida (+XP)");
-            System.out.println("2. Anotar Novo Código Aprendido (+XP)");
-            System.out.println("3. Registrar Exercício Físico feito (+XP)");
-            System.out.println("4. Ver Histórico Completo");
-            System.out.println("5. Sair do Jogo");
-            System.out.println("Escolha uma acao: ");
+            System.out.println("1. Registrar Código Aprendido / Estudo de Programação (+XP)");
+            System.out.println("2. Registrar Exercício Físico feito (+XP)");
+            System.out.println("3. Ver Histórico Completo");
+            System.out.println("4. Sair do Jogo");
+            System.out.println("Escolha uma ação: ");
             opçao = scanner.nextInt();
-            scanner.nextLine(); //Limpa o buffer
+            scanner.nextLine(); //Limpa o buffer do teclado (Essencial!)
 
             if (opçao == 1) {
                 System.out.println("\nQual tipo de exercicio ou estudos você fez?");
